@@ -24,6 +24,7 @@ export default function Signup() {
     axiosClient
       .post("/signup", payload)
       .then(({ data }) => {
+        console.log("bidon");
         setUser(data.user);
         setToken(data.token);
       })
@@ -47,10 +48,10 @@ export default function Signup() {
           <input ref={passwordRef} type="password" placeholder="Password" />
           <input
             ref={passwordConfirmationRef}
-            type="pasword"
+            type="password"
             placeholder="Password Confirmation"
           />
-          <button className="btn btn-block">Login</button>
+          <button className="btn btn-block">Signup</button>
           <p className="message">
             Already Registered? <Link to="/signup">Sign in an account</Link>{" "}
           </p>
